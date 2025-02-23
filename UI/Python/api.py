@@ -15,12 +15,9 @@ CORS(app)
 connection, cursor = connect.getConnection()
 
 
-@app.route('/generate_qr')
+@app.route('/generate_qr',methods=['GET'])
 def generate_qr():
-    # Get URL parameter from request
-    url = request.args.get('url', 'https://example.com')
-
-    # Generate QR code
+    url = request.json['url']
     qr = qrcode.QRCode(
         version=1,
         error_correction=qrcode.constants.ERROR_CORRECT_L,
@@ -29,15 +26,11 @@ def generate_qr():
     )
     qr.add_data(url)
     qr.make(fit=True)
-
     img = qr.make_image(fill="black", back_color="white")
-
-    # Convert to BytesIO for in-memory storage
     img_io = BytesIO()
     img.save(img_io, format="PNG")
     img_io.seek(0)
 
-    # Return the image
     return send_file(img_io, mimetype='image/png')
 
 

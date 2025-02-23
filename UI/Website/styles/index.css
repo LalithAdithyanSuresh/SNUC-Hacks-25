@@ -1,0 +1,29 @@
+body{
+    background-color: #80BCBD;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    background-color: #D5F0C1;
+    border: none;
+    color: #000000;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+}
+.sec-btn{
+    background-color: transparent;
+    border: 3px solid #D5F0C1;
+}
