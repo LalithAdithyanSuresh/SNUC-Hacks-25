@@ -2,8 +2,13 @@ from flask import Flask, request, jsonify,send_file
 import random
 import connect
 import qrcode
+import subprocess
 from io import BytesIO
 from flask_cors import CORS
+
+subprocess.Popen(["python3.11", "/home/ubuntu/snuc/UI/Website/webserver.py"])
+
+
 
 def partyGen():
     return "".join([chr(ord('A') + random.randint(0,25)) for i in range(6)])

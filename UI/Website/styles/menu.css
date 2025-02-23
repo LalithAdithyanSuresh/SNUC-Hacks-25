@@ -1,0 +1,41 @@
+.menu{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    display:  flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+.left-top-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding-top: 10px;
+    margin: 10px 10px 0px 10px;
+    /* background-color: red; */
+}
+.menu-item{
+    background-color: white;
+    width:40px;
+    padding: 5px;
+    aspect-ratio: 1;
+    margin: 0px 10px 10px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+.menu-item img{
+    width: 100%;
+    height: 100%;
+}
+.menu-item-hide{
+    transform: translateX(-100px);
+}

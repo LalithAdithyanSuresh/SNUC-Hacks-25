@@ -8,3 +8,8 @@ fetch('http://localhost:5500/UI/PHP/queries.php', { // Change to your local path
 .then(response => response.json()) // Assuming the PHP file returns JSON
 .then(data => console.log(data)) // Handle the response data
 .catch(error => console.error('Error:', error));
+
+
+function Start(){
+    location.href = "main.html";
+}
