@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/cam.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Document</title>
     <script src="scripts/index.js"></script>
+    <script src="scripts/menu.js"></script>
 </head>
 <body>
     <div class="menu">
@@ -18,10 +20,33 @@
             <div class="menu-item" id="btn2"><img src="images/chat-ico.png"></div>
             <div class="menu-item" id="btn3"></div>
         </div>
+        <div class="mid-main-frame">
+            <div class="menu-mid" id="menu1">
+                <h4>Scan to Join this Room</h4>
+                <img src="images/qr-code.png" id="qrImage">
+                <div class="menu-close" onclick="CloseMenu()"><img src="images/up-ico.png"></div>
+            </div>
+        </div>
         <div class="right-top-menu">
             <div class="menu-item">Home</div>
         </div>
 
     </div>
+    <div class="video-holder">
+        <video id="video" autoplay></video>
+        <div class="stop" onclick="Stop()" id="StopBttn">STOP</div>
+        <div class="start" onclick="Start()" id="StartBttn">START</div>
+    </div>
+    <!-- <p id="output">Detected Objects: </p> -->
+
+    <div class="objects">
+        <div class="object-item">
+            <img src="images/objects/1.png">
+            <!-- <p>Object 1</p> -->
+        </div>
+    </div>
+
+
+    <script src="scripts/cam.js"></script>
 </body>
 </html>

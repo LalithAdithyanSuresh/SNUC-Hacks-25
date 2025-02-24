@@ -27,3 +27,11 @@ button{
     background-color: transparent;
     border: 3px solid #D5F0C1;
 }
+input[type="text"]{
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #D5F0C1;
+    margin: 10px;
+    background-color: #80BCBD;
+    
+}

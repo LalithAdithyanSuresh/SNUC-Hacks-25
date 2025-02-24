@@ -14,4 +14,6 @@ def start():
     return send_file('index.html')
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=8765)
+    app.run(ssl_context=('/etc/letsencrypt/live/vijayanthaalumni.net/fullchain.pem',
+                         '/etc/letsencrypt/live/vijayanthaalumni.net/privkey.pem'),
+            host='0.0.0.0', port=443,debug=True)
